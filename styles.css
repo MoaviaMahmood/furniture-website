@@ -5,6 +5,7 @@
     list-style: none;
     text-decoration: none;
     font-family: "Edu VIC WA NT Beginner", cursive;
+    
 }
 
 :root{
@@ -40,7 +41,7 @@ nav h1{
 
 .navbar li{
     padding: 0 30px;
-    margin: 30px 0; 
+    margin: 20px 0; 
 }
 
 .navbar li a{
@@ -86,6 +87,26 @@ nav h1{
     display: none;
 }
 
+main .living_room{
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+.living_room img{
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom left;
+    object-position: inherit;
+}
+
+.living_room h1{
+    position: absolute;
+    top: 670px;
+    left: 40px;
+    color: umber;
+    animation: bounce 5s;
+}
 /* 4k screen navbar */
 @media (min-width:2500px) {
     nav img{
@@ -159,5 +180,15 @@ nav h1{
         transition: all 0.5s ease;
         display: flex;
         right: 5px;
+    }
+}
+
+@keyframes bounce {
+    from{
+        left: -500px;
+    }
+
+    to{
+        left: 40px;
     }
 }
