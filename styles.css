@@ -12,6 +12,7 @@
     --font-color-nav: #7F5C6D;
     --hover-color-nav: #851a4e;
     --background-color-nav: #DED9D2;
+    --btn-color: #7f5c6d5b;
 }
 
 nav{
@@ -58,7 +59,7 @@ nav h1{
 /* dropdown in navbar furniture option */
 .navbar .dropdown{
     position: absolute;
-    z-index: 999;
+    z-index: 99900;
     display: none;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -79,34 +80,82 @@ nav h1{
 }
 
 
+/* menu icon on navbar for small screens */
 #menu-icon{
     font-size: 35px;
     color: var(--font-color-nav);
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
     display: none;
 }
 
-main .living_room{
-    /* width: 100vw;
-    height: 100vh; */
+/* slideshow on main page css */
+main .carousel{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+
+} 
+
+.carousel li{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+} 
+
+.slide[data-active]{
+    opacity: 1;
+    transition-delay: 0ms;
 }
 
-.living_room img{
-    height: 700px;
+.carousel img{
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: bottom left;
-    object-position: inherit;
+    object-position: center;
+} 
+
+.carousel_btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: var(--font-color-nav);
+    font-size: 60px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #ded9d23d;
+    margin: 10px; 
+    padding: 10px 10px; 
+    
 }
 
-.living_room h1{
-    position: absolute;
-    top: 670px;
-    left: 40px;
-    color: umber;
-    animation: bounce 5s;
+.carousel .prev{
+    left: 10px;
 }
+.carousel .next{
+    right: 10px;
+}
+
+.carousel button span{
+    font-size: 60px;
+    /* border-radius: 10px; */
+}
+
+.carousel button:hover{
+    background-color: var(--background-color-nav);
+
+}
+
+
 /* 4k screen navbar */
 @media (min-width:2500px) {
     nav img{
@@ -145,6 +194,12 @@ main .living_room{
     .navbar li a{
         font-size: 20px;
     }
+
+    .dropdown li img{
+        width: 25px;
+        height: 25px;   
+        margin-right: 10px;
+    }
 }
 
 /*  small screen navbar menu icon */
@@ -171,6 +226,7 @@ main .living_room{
         justify-content: center;
         border-radius: 10px;
         transition: all 0.3s ease;
+        z-index: 9999;
     }
     .navbar{
         display: none;
@@ -180,15 +236,5 @@ main .living_room{
         transition: all 0.5s ease;
         display: flex;
         right: 5px;
-    }
-}
-
-@keyframes bounce {
-    from{
-        left: -500px;
-    }
-
-    to{
-        left: 40px;
     }
 }
