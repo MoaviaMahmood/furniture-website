@@ -89,70 +89,41 @@ nav h1{
     display: none;
 }
 
-/* slideshow on main page css */
-main .carousel{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-
-} 
-
-.carousel li{
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-} 
-
-.slide[data-active]{
-    opacity: 1;
-    transition-delay: 0ms;
-}
-
-.carousel img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-} 
-
-.carousel_btn{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    z-index: 2;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    color: var(--font-color-nav);
-    font-size: 60px;
-    cursor: pointer;
-    border-radius: 15px;
-    background-color: #ded9d23d;
-    margin: 10px; 
-    padding: 10px 10px; 
+/*  small screen navbar menu icon */
+@media (max-width:725px) {
+    nav{
+        justify-content: space-between;
+    }
+    nav div{
+        margin: 10px;
+    }
     
-}
+    #menu-icon{
+        display: block;
+    }
 
-.carousel .prev{
-    left: 10px;
-}
-.carousel .next{
-    right: 10px;
-}
-
-.carousel button span{
-    font-size: 60px;
-    /* border-radius: 10px; */
-}
-
-.carousel button:hover{
-    background-color: var(--background-color-nav);
-
+    .navbar{
+        position: absolute;
+        top: 68px;
+        right: -100%;
+        width: 270px;
+        background-color: var(--background-color-nav);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        z-index: 9999;
+    }
+    .navbar{
+        display: none;
+    }
+    
+    .navbar.open{
+        transition: all 0.5s ease;
+        display: flex;
+        right: 5px;
+    }
 }
 
 
@@ -202,39 +173,81 @@ main .carousel{
     }
 }
 
-/*  small screen navbar menu icon */
-@media (max-width:725px) {
-    nav{
-        justify-content: space-between;
-    }
-    nav div{
-        margin: 10px;
-    }
-    
-    #menu-icon{
-        display: block;
-    }
+/* slideshow on main page css */
+main .carousel{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
 
-    .navbar{
-        position: absolute;
-        top: 68px;
-        right: -100%;
-        width: 270px;
-        background-color: var(--background-color-nav);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-        z-index: 9999;
-    }
-    .navbar{
-        display: none;
-    }
+} 
+
+.carousel li{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 800ms opacity ease-in-out;
+    transition-delay: 800ms;
+} 
+
+.slide[data-active]{
+    opacity: 1;
+    transition-delay: 0ms;
+}
+
+.carousel img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+} 
+
+.carousel_btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: var(--font-color-nav);
+    font-size: 60px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #ded9d23d;
+    margin: 10px; 
+    padding: 10px 10px; 
     
-    .navbar.open{
-        transition: all 0.5s ease;
-        display: flex;
-        right: 5px;
-    }
+}
+
+.carousel .prev{
+    left: 10px;
+}
+.carousel .next{
+    right: 10px;
+}
+
+.carousel button span{
+    font-size: 60px;
+}
+
+.carousel button:hover{
+    background-color: var(--background-color-nav);
+
+}
+
+.projects{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    top: 781px;
+}
+
+.projects h1{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 50px;
 }
