@@ -239,10 +239,7 @@ main .carousel{
 
 .projects{
     position: relative;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
+    overflow:auto;
     width: 100vw;
     height: 100vh;
     top:100vh;
@@ -252,29 +249,23 @@ main .carousel{
 .projects h1{
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     font-size: 50px;
     color: var(--hover-color-nav);
     transition: all 0.3s ease;
 }
 
-.card_container{
-    padding: 5rem;
-}
-.card_content{
-    /* display: flex; */
-    /* background-color: red; */
-    border-radius: 10px;
-    /* margin-inline: 1.75rem; */
-    overflow: hidden; 
+
+.swiper-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 .card_article{
     padding: 10px;
-    width: 520px;
-    overflow: hidden;
-    border-radius: 10px;
-    
+    width: 400px;    
 }
 
 .card_img{
@@ -285,7 +276,8 @@ main .carousel{
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    height: 300px;
+    height: 230px;
+    width: 380px;
     object-fit: cover;
     object-position: center;
     margin-bottom: -.75rem;
@@ -294,6 +286,7 @@ main .carousel{
 
 .card_data{
     background-color: var(--btn-color);
+    height: 90px;
     padding: 1rem 2rem .75rem 2rem;
     border-radius: 10px;
     text-align: center;
@@ -301,7 +294,6 @@ main .carousel{
 
 .card_name{
     font-size: 25px;
-    margin: 10px 0 0 5px;
     color: var(--hover-color-nav);
 }
 
@@ -309,9 +301,9 @@ main .carousel{
     background-color: var(--font-color-nav);
     color: var(--background-color-nav);
     display: inline-block;
-    padding: 10px 15px;
+    padding: 5px 10px;
     margin-top: 5px;
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 600;
     border-radius: 10px;
     transition: all 0.3s ease;
