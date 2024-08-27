@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- icon in browser tab -->
+    <link rel="shortcut icon" type="x-icon" href="./img/logo.png" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- google icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Oiftah Home page</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- logo -->
+            <div>
+                <img src="../img/logo.png" alt="logo" width="66px" />
+                <a href="index.html">
+                    <h1>Oiftah</h1>
+                </a>
+            </div>
+            <!-- navbar -->
+            <ul class="navbar">
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/furniture.html">Furniture</a>
+                    <!-- dropdown for furniture options -->
+                    <ul class="dropdown">
+                        <li><img src="../img/queen bed-1.png" alt="Bedroom icon"><a href="#">Bedroom</a></li>
+                        <li><img src="../img/microwave.png" alt="Kitchen icon"><a href="#">Kitchen</a></li>
+                        <li><img src="../img/office chair.png" alt="office icon"><a href="#">Office</a></li>
+                        <li><img src="../img/bathub 1.png" alt="Bathroom icon"><a href="#">Bathroom</a></li>
+                        <li><img src="../img/frame.png" alt="Decoration icon"><a href="#">Decoration</a></li>
+                        <li><img src="../img/bbq.png" alt="Outdoor icon"><a href="#">Outdoor</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/about-us.html">About Us</a></li>
+                <li><a href="../html/contact.html">Contact</a></li>
+            </ul>
+            <!-- menu bar icon for small screens -->
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel" data-carousel>
+            <!-- previous button on gallery slideshow -->
+            <button class="carousel_btn prev" data-carousel-button="prev"><span
+                    class="material-symbols-outlined">arrow_back_ios</span>
+            </button>
+            <!-- next button on gallery slideshow -->
+            <button class="carousel_btn next" data-carousel-button="next"><span
+                    class="material-symbols-outlined">arrow_forward_ios</span></button>
+            <ul data-slides>
+                <li class="slide" data-active><img src="../img/slideshow1.jpg" alt="living room" width="1300px"></li>
+                <li class="slide"><img src="../img/slideshow2.jpg" alt="bedroom" width="1200px"></li>
+                <li class="slide"><img src="../img/slideshow7.jpg" alt="outdoor" width="1200px"></li>
+                <li class="slide"><img src="../img/slideshow3.jpg" alt="kitchen" width="1200px"></li>
+                <li class="slide"><img src="../img/slideshow4.jpg" alt="office" width="1200px"></li>
+                <li class="slide"><img src="../img/slideshow5.jpg" alt="bathroom" width="1200px"></li>
+                <li class="slide"><img src="../img/slideshow6.jpg" alt="decoration" width="1200px"></li>
+            </ul>
+        </div>
+
+        <!-- Projects Cards-->
+        <div class="projects">
+            <h1>Projects</h1>
+            <div class="swiper-wrapper">
+                <article class="card_article">
+                    <div class="card_img">
+                        <img src="../img/project2.jpg" alt="project 2" width="500px">
+                    </div>
+                    <div class="card_data">
+                        <h3 class="card_name">Chandelier Bar</h3>
+                        <p class="card_description"></p>
+                        <a href="https://www.fourseasons.com/neworleans/dining/lounges/chandelier-bar/"
+                            class="card_button" target="_blank">Read More</a>
+                    </div>
+                </article>
+                <article class="card_article">
+                    <div class="card_img">
+                        <img src="../img/project3.jpg" alt="project 3" width="500px">
+                    </div>
+                    <div class="card_data">
+                        <h3 class="card_name">The Adolphus</h3>
+                        <p class="card_description"></p>
+                        <a href="https://www.adolphus.com/" class="card_button" target="_blank"> Read More</a>
+                    </div>
+                </article>
+                <article class="card_article">
+                    <div class="card_img">
+                        <img src="../img/project6.jpg" alt="project 6" width="500px">
+                    </div>
+                    <div class="card_data">
+                        <h3 class="card_name">PUBLIC Hotel</h3>
+                        <p class="card_description"></p>
+                        <a href="https://www.publichotels.com/newyork/private-events/sophia" class="card_button"
+                            target="_blank">Read More</a>
+                    </div>
+                </article>
+                <article class="card_article">
+                    <div class="card_img">
+                        <img src="../img/project7.jpg" alt="project 7" width="500px">
+                    </div>
+                    <div class="card_data">
+                        <h3 class="card_name">Carmel at Sorrento</h3>
+                        <p class="card_description"></p>
+                        <a href="https://carmelatsorrento.com.au/" class="card_button" target="_blank"> Read
+                            More</a>
+                    </div>
+                </article>
+                <article class="card_article">
+                    <div class="card_img">
+                        <img src="../img/project8.jpg" alt="project 8" width="500px">
+                    </div>
+                    <div class="card_data">
+                        <h3 class="card_name">1 Hotel South Beach</h3>
+                        <p class="card_description"></p>
+                        <a href="https://www.1hotels.com/south-beach" class="card_button" target="_blank"> Read
+                            More</a>
+                    </div>
+                </article>
+                <article class="card_article">
+                    <div class="card_img">
+                        <img src="../img/project9.avif" alt="project 9" width="500px">
+                    </div>
+                    <div class="card_data">
+                        <h3 class="card_name">Mandarin Oriental, NYC</h3>
+                        <p class="card_description"></p>
+                        <a href="https://www.mandarinoriental.com/en/new-york/manhattan/gallery#/" class="card_button"
+                            target="_blank"> Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+</body>
+
+</html>
