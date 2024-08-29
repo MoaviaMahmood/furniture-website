@@ -132,7 +132,7 @@ nav h1 {
 
 
 /* 4k screen navbar */
-@media (min-width:2500px) {
+@media (min-width:2300px) {
     nav img {
         width: 100px;
         height: 100px;
@@ -247,20 +247,30 @@ main .carousel {
 
 .intro {
     position: relative;
-    top: 100vh;
+}
+.intro .box{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.intro_writings{
+    position: absolute;
+    top: 20vh; 
     width: 100vw;
     height: 55vh;
-    background-color: var(--btn-color);
 }
 
 .intro_heading {
-    font-size: 50px;
+    font-size: 80px;
     display: flex;
     justify-content: center;
     width: 80vw;
     margin: auto;
     padding: 25px 0 0 0;
-    color: var(--hover-color-nav);
+    color: var(--background-color-nav);
 
 }
 
@@ -270,50 +280,27 @@ main .carousel {
     width: 80vw;
     margin: auto;
     padding: 40px 0 0 0;
-    color: var(--font-color-nav);
+    color: var(--background-color-nav);
 }
 
-.intro_description span {
-    color: var(--hover-color-nav);
-}
-
-@media (min-width:2500px) {
-    .intro{
-        height: 35vh;
-    }
-
-    .intro_heading{
-        font-size: 80px;
-    }
-
-    .intro_description {
-        font-size: 40px;
+@media (min-width:2300px) {
+    .intro_heading {
+        font-size: 150px;    
     }
     
-}
-
-@media (max-width:1126px) {
-
     .intro_description {
-        font-size: 25px;
-    }
-}
-@media (max-width:960px) {
-
-    .intro_description {
-        font-size: 20px;
-    }
-}
-@media (max-width:772px) {
-    .intro_heading{
-        font-size: 40px;
-    }
-
-    .intro_description {
-        font-size: 20px;
+        font-size: 60px;
     }
 }
 
+@media (max-width:680px) {
+
+    .intro_writings {
+        position: absolute;
+        top: 10vh;
+        height: 10vh;
+    }
+}
 @media (max-width:397px) {
 
     .intro_description {
@@ -321,13 +308,11 @@ main .carousel {
     }
 }
 
-
-
 .projects {
     position: relative;
-    overflow: auto;
+    overflow: none;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
     top: 100vh;
     background-color: var(--background-color-nav);
 }
@@ -411,4 +396,29 @@ main .carousel {
         padding-bottom: 100px;
     }
     
+}
+
+@media (max-width:1199px) {
+    .projects {
+        height: 140vh;
+    }
+}
+@media (max-width:799px) {
+    .projects {
+        height: 260vh;
+    }
+}
+@media (max-width:420px) {
+    .card_article{
+        width: 300px;
+    }
+    .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 300px);
+        justify-content: space-around;
+        align-content: space-around;
+    }
+    .card_img img{
+        width: 280px;
+    }
 }
