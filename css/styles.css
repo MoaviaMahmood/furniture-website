@@ -405,7 +405,7 @@ main .carousel {
 }
 @media (max-width:799px) {
     .projects {
-        height: 270vh;
+        height: 275vh;
     }
 }
 @media (max-width:420px) {
@@ -486,6 +486,12 @@ footer{
 
 .contact_footer span{
     margin-right: 10px;
+}
+
+@media (max-width:1199px) {
+    footer {
+        top: 140vh;
+    }
 }
 
 @media (max-width: 630px) {
