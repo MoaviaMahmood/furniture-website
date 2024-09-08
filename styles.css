@@ -5,7 +5,6 @@
     list-style: none;
     text-decoration: none;
     font-family: "Edu VIC WA NT Beginner", cursive, arial;
-
 }
 
 :root {
@@ -182,7 +181,7 @@ nav h1 {
 /* slideshow on main page css */
 main .carousel {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
 
@@ -250,7 +249,7 @@ main .carousel {
 }
 .intro .box{
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: black;
     opacity: 0.6;
@@ -310,8 +309,8 @@ main .carousel {
 
 .projects {
     position: relative;
-    overflow: none;
-    width: 100vw;
+    overflow: auto;
+    width: 100%;
     height: 100vh;
     top: 100vh;
     background-color: var(--background-color-nav);
@@ -387,10 +386,9 @@ main .carousel {
 
 
 @media (min-width:2500px) {
-    .projects {
+    /* .projects {
         height: 55vh;
-
-    }
+    } */
     .projects h1 {
         font-size: 80px;
         padding-bottom: 100px;
@@ -399,14 +397,14 @@ main .carousel {
 }
 
 @media (max-width:1199px) {
-    .projects {
+    /* .projects {
         height: 140vh;
-    }
+    } */
 }
 @media (max-width:799px) {
-    .projects {
+    /* .projects {
         height: 275vh;
-    }
+    } */
 }
 @media (max-width:420px) {
     .card_article{
@@ -429,6 +427,7 @@ footer{
     justify-content: space-around;
     top: 100vh;
     height: 50vh;
+    width: 100%;
     background-color: var(--hover-color-nav);
 }
 
@@ -488,11 +487,11 @@ footer{
     margin-right: 10px;
 }
 
-@media (max-width:1199px) {
+/* @media (max-width:1199px) {
     footer {
         top: 140vh;
     }
-}
+} */
 
 @media (max-width: 630px) {
     .footer-logo{
@@ -504,17 +503,13 @@ footer{
     }
 
     .contact_footer h5{
-        font-size: 10px;
+        font-size: 12px;
     
     }
 }
 @media (max-width: 430px) {
-    .footer-logo{
-        position: relative;
-        top: 20%;
-        display:list-item;
-        justify-content: center;
-        align-items: center;
+    .footer-logo img{
+        display:none;
     }
     
 }
