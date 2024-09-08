@@ -309,7 +309,7 @@ main .carousel {
 
 .projects {
     position: relative;
-    overflow: auto;
+    overflow: none;
     width: 100%;
     height: 100vh;
     top: 100vh;
@@ -326,15 +326,15 @@ main .carousel {
 }
 
 .swiper-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 400px);
+    margin-top: 50px;
+    display: flex;
     justify-content: space-around;
     align-content: space-around;
 }
 
 .card_article {
     padding: 10px;
-    width: 400px;
+    width: 500px;
 }
 
 .card_img {
@@ -346,8 +346,8 @@ main .carousel {
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    height: 230px;
-    width: 380px;
+    height: 300px;
+    width: 480px;
     object-fit: cover;
     object-position: center;
     margin-bottom: -.75rem;
@@ -356,14 +356,14 @@ main .carousel {
 
 .card_data {
     background-color: var(--btn-color);
-    height: 90px;
+    height: 110px;
     padding: 1rem 2rem .75rem 2rem;
     border-radius: 10px;
     text-align: center;
 }
 
 .card_name {
-    font-size: 25px;
+    font-size: 30px;
     color: var(--hover-color-nav);
 }
 
@@ -371,9 +371,9 @@ main .carousel {
     background-color: var(--font-color-nav);
     color: var(--background-color-nav);
     display: inline-block;
-    padding: 5px 10px;
-    margin-top: 5px;
-    font-size: 10px;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 15px;
     font-weight: 600;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -384,11 +384,35 @@ main .carousel {
     color: var(--hover-color-nav);
 }
 
+.project-view-more{
+    background-color: var(--hover-color-nav);
+    color: var(--background-color-nav);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    /* width: ; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    border: 3px solid var(--hover-color-nav);
+    transition: 0.3s ease;
+}
+
+.project-view-more:hover{
+    background-color: var(--background-color-nav);
+    color: var(--hover-color-nav);
+    border: 3px solid var(--hover-color-nav);
+}
+
 
 @media (min-width:2500px) {
-    /* .projects {
+    .projects {
         height: 55vh;
-    } */
+    }
     .projects h1 {
         font-size: 80px;
         padding-bottom: 100px;
@@ -397,28 +421,105 @@ main .carousel {
 }
 
 @media (max-width:1199px) {
-    /* .projects {
-        height: 140vh;
-    } */
-}
-@media (max-width:799px) {
-    /* .projects {
-        height: 275vh;
-    } */
-}
-@media (max-width:420px) {
+    .card_img img {
+        height: 250px;
+        width: 400px;
+    }
+
+    .card_data {
+        height: 80px;
+        width: 400px;
+    }
+
     .card_article{
-        width: 300px;
+        width: 425px;
     }
-    .swiper-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 300px);
-        justify-content: space-around;
-        align-content: space-around;
+
+    .card_data {
+        height: 110px;
     }
-    .card_img img{
-        width: 280px;
+}
+@media (max-width:940px) {
+    .card_img img {
+        height: 200px;
+        width: 350px;
     }
+
+    .card_data {
+        height: 50px;
+        width: 350px;
+    }
+
+    .card_article{
+        width: 370px;
+    }
+
+    .card_data {
+        height: 90px;
+    }
+
+    .card_name{
+        font-size: 20px;
+    }
+
+    .card_button {
+        font-size: 10px;
+    }
+}
+@media (max-width:768px) {
+    .projects{
+        height: 120vh;
+    }
+    
+    .swiper-wrapper{
+        display: block;
+        margin-top: 10px;
+        
+    }
+
+    .card_article{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+}
+@media (max-width:768px) {
+    .projects{
+        height: 100vh;
+    }
+
+    .card_img img {
+        height: 150px;
+        width: 250px;
+    }
+
+    .card_data {
+        height: 30px;
+        width: 250px;
+    }
+
+    .card_article{
+        width: 270px;
+    }
+
+    .card_data {
+        height: 78px;
+    }
+
+    .card_name{
+        font-size: 15px;
+    }
+
+    .card_button {
+        font-size: 8px;
+    }
+    
+    .project-view-more{
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    
 }
 
 footer{
