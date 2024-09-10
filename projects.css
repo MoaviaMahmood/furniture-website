@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Edu VIC WA NT Beginner", cursive, arial;
+
+}
+
+:root {
+    --font-color-nav: #7F5C6D;
+    --hover-color-nav: #851a4e;
+    --background-color-nav: #DED9D2;
+    --btn-color: #7f5c6d5b;
+}
+
+.project {
+    position: relative;
+    overflow: none;
+    width: 100%;
+    height: 280vh;
+    top: 80px;
+    padding: 20px;
+    
+    /* background-color: var(--background-color-nav); */
+}
+
+.project h1{
+    color: var(--hover-color-nav);
+    font-weight: 900;
+    font-size: 50px;
+}
+
+h1 span{
+    position: absolute;
+    left: 166px;
+    top: -40px;
+    transform: translateX();
+    z-index: 2222;
+}
+
+.project_card_article :nth-child(1){
+    margin-top: 20px;
+}
+
+.project_card_article{
+    position: relative;
+    display: flex;
+    margin: 45px 0 20px 0;
+}
+
+.project_card_img img{
+    position: relative;
+    border-radius: 10px;
+    margin-right: -20px;
+    width: 450px;
+    height: 300px;
+    z-index: 11111;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project_card_data{
+    position: relative;
+    background-color: var(--background-color-nav);
+    height: 310px;
+    padding: 20px 10px 10px 35px;
+    border-radius: 10px;
+}
+
+.project_card_name{
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--hover-color-nav);
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.project_card_description{
+    /* position: relative; */
+    font-size: 20px;
+    padding-left: 20px;
+    font-weight: 400;
+    margin: 40px 0 25px 0;
+    word-spacing: 5px;
+}
+
+.project_card_button{
+    position: absolute;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--hover-color-nav);
+    border: 2px solid var(--hover-color-nav);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.project_card_button:hover{
+    background-color: var(--hover-color-nav);
+    color: var(--background-color-nav);
+}
+
+@media (max-width: 1215px) {
+    .project{
+        height: 345vh;
+    }
+    
+    .project_card_description{
+        font-size: 15px;
+        padding-left: 20px;
+        font-weight: 200;
+        margin: 40px 0 20px 0;
+        word-spacing: 1px;
+    }
+}
+
+@media (max-width:920px) {
+    .project{
+        height: 530vh;
+    }
+    h1 span{
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto;
+    }
+    
+    .project_card_article{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 450px;
+    }
+
+    .project_card_img img{
+        width: 450px;
+        height: 450px;
+    }
+
+    .project_card_data{
+        width: 450px;
+        height: 250px;
+        margin-top: -20px;
+        padding: 20px 0 0 0;
+    }
+
+    .project_card_name{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        margin: 0;
+        
+    }
+
+    .project_card_description{
+        margin:20px 10px 10px 10px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .project_card_button{
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+}
+
+@media (max-width:480px) {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    height: 50vh;
+    width: 100%;
+    background-color: var(--hover-color-nav);
+}

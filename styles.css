@@ -19,6 +19,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     background-color: var(--background-color-nav);
+    box-shadow: rgba(0, 0, 0, 0.35) -1px -4px 36px -28px inset;
 }
 
 nav div {
