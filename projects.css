@@ -22,8 +22,6 @@
     height: 280vh;
     top: 80px;
     padding: 20px;
-    
-    /* background-color: var(--background-color-nav); */
 }
 
 .project h1{
@@ -78,7 +76,6 @@ h1 span{
 }
 
 .project_card_description{
-    /* position: relative; */
     font-size: 20px;
     padding-left: 20px;
     font-weight: 400;
