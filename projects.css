@@ -19,7 +19,7 @@
     position: relative;
     overflow: none;
     width: 100%;
-    height: 280vh;
+    height: 350vh;
     top: 80px;
     padding: 20px;
 }
@@ -103,7 +103,7 @@ h1 span{
 
 @media (max-width: 1215px) {
     .project{
-        height: 345vh;
+        height: 370vh;
     }
     
     .project_card_description{
@@ -117,7 +117,7 @@ h1 span{
 
 @media (max-width:920px) {
     .project{
-        height: 530vh;
+        height: 600vh;
     }
     h1 span{
         left: 50%;
@@ -166,8 +166,24 @@ h1 span{
     }
 }
 
-@media (max-width:480px) {
-    
+@media (max-width:470px) {
+    .project{
+        height: 680vh;
+    }
+
+    .project_card_article{
+        width: 310px;
+    }
+
+    .project_card_img img{
+        width: 310px;
+        height: 400px;
+    }
+
+    .project_card_data{
+        width: 310px;
+        height: 300px;
+    }
 }
 
 
