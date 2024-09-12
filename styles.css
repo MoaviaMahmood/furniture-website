@@ -218,7 +218,7 @@ main .carousel {
     top: 50%;
     transform: translateY(-50%);
     background: none;
-    color: var(--font-color-nav);
+    color: var(--hover-color-nav);
     font-size: 60px;
     cursor: pointer;
     border-radius: 15px;
@@ -228,10 +228,13 @@ main .carousel {
 
 }
 
-.carousel .prev {
+.carousel .prev{
     left: 10px;
 }
-
+.carousel .prev span{
+position: relative;
+left: 15%;
+}
 .carousel .next {
     right: 10px;
 }
@@ -242,7 +245,7 @@ main .carousel {
 
 .carousel button:hover {
     background-color: var(--background-color-nav);
-
+    color: var(--hover-color-nav);
 }
 
 .intro {
@@ -259,7 +262,7 @@ main .carousel {
 .intro_writings{
     position: absolute;
     top: 20vh; 
-    width: 100vw;
+    width: 100%;
     height: 55vh;
 }
 
