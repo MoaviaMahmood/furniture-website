@@ -14,6 +14,17 @@
     --btn-color: #7f5c6d5b;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: var(--btn-color);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color-nav);
+    border-radius: 10px;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -314,8 +325,9 @@ main .carousel {
         font-size: 18px;
     }
 }
+
 /*************** Products section ***********************/
-.product_grid{
+.product_grid {
     position: relative;
     display: flex;
     align-items: center;
@@ -324,19 +336,20 @@ main .carousel {
 }
 
 
-.products{
+.products {
     display: grid;
-    grid-template-columns: repeat(3,320px);
+    grid-template-columns: repeat(3, 320px);
     grid-template-rows: 50px 480px 480px;
     row-gap: 30px;
     column-gap: 30px;
     height: 100%;
     position: relative;
     top: 100vh;
-    margin: 30px 0 20px 0 ;
-    
+    margin: 30px 0 20px 0;
+
 }
-.product_main_heading{
+
+.product_main_heading {
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
@@ -344,6 +357,7 @@ main .carousel {
     font-size: 25px;
 
 }
+
 .product_card {
     position: relative;
     width: 320px;
@@ -388,6 +402,7 @@ main .carousel {
     padding-top: 20px;
     z-index: 1;
 }
+
 .card .imgBox img {
     max-width: 100%;
     transition: .5s;
@@ -447,13 +462,14 @@ main .carousel {
     width: auto;
 }
 
-.product-view-more{
+.product-view-more {
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
     margin: 20px 0 40px 0;
 }
-.product-view-more > a{
+
+.product-view-more>a {
     padding: 20px 30px;
     border-radius: 30px;
     text-transform: uppercase;
@@ -465,34 +481,36 @@ main .carousel {
     text-decoration: none;
 }
 
-.product-view-more > a:hover{
+.product-view-more>a:hover {
     color: var(--hover-color-nav);
     background: var(--background-color-nav);
     border: 3px solid var(--hover-color-nav);
 }
 
 @media (max-width:1260px) {
-    .products{
-        
-        grid-template-columns: repeat(2,320px);
-        grid-template-rows: 50px repeat(3,480px);
-        
+    .products {
+
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: 50px repeat(3, 480px);
+
     }
 
     .product_main_heading,
-    .product-view-more{
+    .product-view-more {
         grid-column-start: 1;
         grid-column-end: 3;
     }
 }
+
 @media (max-width:850px) {
-    .products{
-        grid-template-columns: repeat(1,320px);
-        grid-template-rows: 50px repeat(3,480px);
-        
+    .products {
+        grid-template-columns: repeat(1, 320px);
+        grid-template-rows: 50px repeat(3, 480px);
+
     }
+
     .product_main_heading,
-    .product-view-more{
+    .product-view-more {
         grid-column-start: 1;
         grid-column-end: 2;
     }
@@ -614,16 +632,17 @@ main .carousel {
         padding-bottom: 100px;
     }
 
-    .swiper-wrapper{
+    .swiper-wrapper {
         margin-top: 30px;
     }
 
 }
 
 @media (max-width:1199px) {
-    .projects{
+    .projects {
         height: 135vh;
     }
+
     .swiper-wrapper {
         margin-top: 10px;
         grid-template-columns: repeat(1, 418px);
@@ -631,6 +650,7 @@ main .carousel {
         row-gap: 30px;
         justify-content: center;
     }
+
     .card_img img {
         height: 250px;
         width: 400px;
@@ -654,11 +674,12 @@ main .carousel {
 @media (max-width:940px) {
     .swiper-wrapper {
         margin-top: 10px;
-        grid-template-columns: repeat(1,365px);
+        grid-template-columns: repeat(1, 365px);
         grid-template-rows: repeat(2, 350px);
         row-gap: 30px;
         justify-content: center;
     }
+
     .card_img img {
         height: 250px;
         width: 350px;
@@ -687,12 +708,13 @@ main .carousel {
 }
 
 @media (max-width:768px) {
-    .projects{
+    .projects {
         height: 100vh;
     }
+
     .swiper-wrapper {
         margin-top: 10px;
-        grid-template-columns: repeat(1,270px);
+        grid-template-columns: repeat(1, 270px);
         grid-template-rows: repeat(2, 235px);
         row-gap: 30px;
         justify-content: center;
