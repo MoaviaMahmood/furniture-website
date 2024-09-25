@@ -519,15 +519,18 @@ main .carousel {
 }
 
 .swiper-wrapper {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(1, 420px);
+    column-gap: 150px;
+    justify-content: center;
 }
 
 .card_article {
     padding: 10px;
     width: 500px;
+    /* height: 420px; */
 }
 
 .card_img {
@@ -586,11 +589,10 @@ main .carousel {
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    /* width: ; */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 50px;
+    margin-top: 80px;
     border: 3px solid var(--hover-color-nav);
     transition: 0.3s ease;
 }
@@ -612,9 +614,23 @@ main .carousel {
         padding-bottom: 100px;
     }
 
+    .swiper-wrapper{
+        margin-top: 30px;
+    }
+
 }
 
 @media (max-width:1199px) {
+    .projects{
+        height: 135vh;
+    }
+    .swiper-wrapper {
+        margin-top: 10px;
+        grid-template-columns: repeat(1, 418px);
+        grid-template-rows: repeat(2, 370px);
+        row-gap: 30px;
+        justify-content: center;
+    }
     .card_img img {
         height: 250px;
         width: 400px;
@@ -627,6 +643,7 @@ main .carousel {
 
     .card_article {
         width: 425px;
+        height: 380px;
     }
 
     .card_data {
@@ -635,8 +652,15 @@ main .carousel {
 }
 
 @media (max-width:940px) {
+    .swiper-wrapper {
+        margin-top: 10px;
+        grid-template-columns: repeat(1,365px);
+        grid-template-rows: repeat(2, 350px);
+        row-gap: 30px;
+        justify-content: center;
+    }
     .card_img img {
-        height: 200px;
+        height: 250px;
         width: 350px;
     }
 
@@ -663,27 +687,15 @@ main .carousel {
 }
 
 @media (max-width:768px) {
-    .projects {
-        height: 120vh;
-    }
-
-    .swiper-wrapper {
-        display: block;
-        margin-top: 10px;
-
-    }
-
-    .card_article {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-}
-
-@media (max-width:768px) {
-    .projects {
+    .projects{
         height: 100vh;
+    }
+    .swiper-wrapper {
+        margin-top: 10px;
+        grid-template-columns: repeat(1,270px);
+        grid-template-rows: repeat(2, 235px);
+        row-gap: 30px;
+        justify-content: center;
     }
 
     .card_img img {
