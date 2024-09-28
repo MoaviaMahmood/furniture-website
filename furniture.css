@@ -1,0 +1,210 @@
+/*************** furniture section ***********************/
+.furniture_grid {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.furniture {
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    grid-template-rows: 50px 480px 480px;
+    row-gap: 30px;
+    column-gap: 30px;
+    height: 100%;
+    position: absolute;
+    top: 60px;
+    margin: 30px 0 20px 0;
+
+}
+
+.furniture_main_heading {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    color: var(--hover-color-nav);
+    font-size: 25px;
+
+}
+
+.furniture_card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: var(--background-color-nav);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.furniture_card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-color);
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.furniture_card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.furniture_card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.furniture_card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card .imgBox img {
+    max-width: 100%;
+    transition: .5s;
+}
+
+.card:hover .imgBox img {
+    max-width: 50%;
+}
+
+.furniture_card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.furniture_card .contentBox h3 {
+    font-size: 18px;
+    color: var(--hover-color-nav);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.furniture_card .contentBox .price {
+    font-size: 24px;
+    color: var(--hover-color-nav);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.furniture_card .contentBox .buy {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: var(--background-color-nav);
+    text-decoration: none;
+    background: var(--hover-color-nav);
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.furniture_card:hover .contentBox .buy {
+    top: 0;
+    opacity: 1;
+}
+
+.mouse {
+    height: 300px;
+    width: auto;
+}
+
+.furniture-view-more {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.furniture-view-more>a {
+    padding: 20px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    color: var(--background-color-nav);
+    background: var(--hover-color-nav);
+    border: transparent;
+    text-decoration: none;
+}
+
+.furniture-view-more>a:hover {
+    color: var(--hover-color-nav);
+    background: var(--background-color-nav);
+    border: 3px solid var(--hover-color-nav);
+}
+
+@media (max-width:1100px) {
+    .furniture {
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: 50px repeat(3, 480px);
+
+    }
+
+    .furniture_main_heading,
+    .furniture-view-more {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+
+@media (max-width:850px) {
+    .furniture {
+        grid-template-columns: repeat(1, 320px);
+        grid-template-rows: 50px repeat(3, 480px);
+
+    }
+
+    .furniture_main_heading,
+    .furniture-view-more {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 160vh;
+    height: 50vh;
+    width: 100%;
+    background-color: var(--hover-color-nav);
+}
+
+@media (max-width:1100px) {
+footer {
+    top: 230vh;
+}
+}
+@media (max-width:850px) {
+footer {
+    top: 420vh;
+}
+}
